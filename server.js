@@ -13,15 +13,16 @@ app.use(express.urlencoded({ extended: true }));
 
 // 3: View codelar
 app.set("views", "views");
-app.set("view ingine", "ejs");
+app.set("view engine", "ejs");
 
 // 4: Routing codelar
-app.get("/Main", function (req, res) {
-  res.end("<h1>HELLO WORLD</h1>");
+app.post("/create-item", (req, res) => {
+  console.log(req.body);
+  res.json({ test: "succes" });
 });
 
-app.get("/Gift", function (req, res) {
-  res.end("<h1>Sovgalar qismi</h1>");
+app.get("/", function (req, res) {
+  res.render("harid");
 });
 
 const server = http.createServer(app);
