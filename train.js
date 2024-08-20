@@ -1,4 +1,4 @@
-console.log("Jack Ma maslahatlari");
+/*console.log("Jack Ma maslahatlari");
 
 const list = [
   "yahshi talaba boling", // 0-20
@@ -12,10 +12,10 @@ const list = [
   "yoshlarga investitsiya giling", // 50-60
 
   "endi dam oling, foydasi yoq endi", // 60
-];
+];*/
 
 // CALLBACK functions
-function maslahatBering(a, callback) {
+/*function maslahatBering(a, callback) {
   if (typeof a !== "number") callback("insert a number", null);
   else if (a <= 20) callback(null, list[0]);
   else if (a > 20 && a <= 30) callback(null, list[1]);
@@ -36,7 +36,7 @@ maslahatBering(70, (err, data) => {
     console.log(data);
   }
 });
-console.log("passed here 1");
+console.log("passed here 1");*/
 
 //ASYNC   functions
 /* async function maslahatBering(a) {
@@ -83,3 +83,21 @@ console.log("passed here 1");*/
   console.log(javob);
 }
 run();*/
+
+//Masalani izohi A-TASK:
+
+// Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
+// MASALAN countLetter("e", "engineer") 3ni return qiladi.
+
+function countLetters(letter, word) {
+  let count = 0;
+  for (let i = 0; i <= word.length; i++) {
+    if (word[i] == letter) {
+      count++;
+    }
+  }
+  return count;
+}
+
+const result = countLetters("a", "analytical");
+console.log("result:", result);
