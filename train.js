@@ -106,7 +106,7 @@ console.log("result:", result);*/
 // Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
 // MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 
-function countDigits(a) {
+/*function countDigits(a) {
   let count = 0;
   for (let i = 0; i < a.length; i++) {
     if (a[i] >= 0) count++;
@@ -115,4 +115,22 @@ function countDigits(a) {
 }
 
 const result = countDigits("asd31234809gfd87676h56g");
+console.log("result:", result);*/
+
+// Masalani izohi c-TASK:
+
+// Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent ("mitgroup", "gmtiprou") return qiladi true;
+
+function checkContent(word1, word2) {
+  if (word1.length !== word2.length) {
+    return false;
+  }
+
+  // Har ikkala stringni tartiblaㅠ va solishtiryapdi
+  return word1.split("").sort().join("") === word2.split("").sort().join("");
+}
+let result = checkContent("MIT eng zo'ri", "io'rz gen ITM");
 console.log("result:", result);
+let result1 = checkContent("Uzbekistan", "South Korea");
+console.log("result1:", result1);
