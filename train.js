@@ -122,15 +122,58 @@ console.log("result:", result);*/
 // Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent ("mitgroup", "gmtiprou") return qiladi true;
 
-function checkContent(word1, word2) {
+/*function checkContent(word1, word2) {
   if (word1.length !== word2.length) {
     return false;
   }
 
-  // Har ikkala stringni tartiblaㅠ va solishtiryapdi
+  // Har ikkala stringni tartiblab va solishtiryapdi
   return word1.split("").sort().join("") === word2.split("").sort().join("");
 }
+
 let result = checkContent("MIT eng zo'ri", "io'rz gen ITM");
 console.log("result:", result);
 let result1 = checkContent("Uzbekistan", "South Korea");
-console.log("result1:", result1);
+console.log("result1:", result1);*/
+
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.products = { non, lagmon, cola };
+  }
+
+  javob(message) {
+    const currentTime = new Date().toLocaleTimeString();
+    console.log(`Hozir ${currentTime}da ${message}`);
+  }
+
+  qoldiq() {
+    const { non, lagmon, cola } = this.products;
+    return `Hozir ${new Date().toLocaleTimeString()}da ${non}ta non, ${lagmon}ta lagmon va ${cola}ta cola mavjud!`;
+  }
+
+  sotish(mahsulot, miqdor) {
+    if (this.products[mahsulot] >= miqdor) {
+      this.products[mahsulot] -= miqdor;
+      this.javob(`${miqdor}ta ${mahsulot} sotildi!`);
+    } else {
+      this.javob(
+        `${mahsulot} uchun yetarli miqdor yo'q yoki mahsulot topilmadi!`
+      );
+    }
+  }
+
+  qabul(mahsulot, miqdor) {
+    if (this.products[mahsulot] !== undefined) {
+      this.products[mahsulot] += miqdor;
+      this.javob(`${miqdor}ta ${mahsulot} qabul qilindi!`);
+    } else {
+      this.javob(`${mahsulot} mahsuloti topilmadi!`);
+    }
+  }
+}
+
+const shop = new Shop(9, 4, 6);
+console.log(shop.qoldiq());
+shop.sotish("non", 4);
+shop.qabul("cola", 2);
+console.log(shop.qoldiq());
