@@ -177,3 +177,14 @@ console.log(shop.qoldiq());
 shop.sotish("non", 4);
 shop.qabul("cola", 2);
 console.log(shop.qoldiq());
+
+// Masalani izohi c-TASK:
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function getReverse(string) {
+  return string.split("").reverse().join("");
+}
+
+console.log(getReverse("MIT eng zo'ri"));
