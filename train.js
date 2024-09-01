@@ -136,7 +136,7 @@ console.log("result:", result);
 let result1 = checkContent("Uzbekistan", "South Korea");
 console.log("result1:", result1);*/
 
-class Shop {
+/*class Shop {
   constructor(non, lagmon, cola) {
     this.products = { non, lagmon, cola };
   }
@@ -176,15 +176,26 @@ const shop = new Shop(9, 4, 6);
 console.log(shop.qoldiq());
 shop.sotish("non", 4);
 shop.qabul("cola", 2);
-console.log(shop.qoldiq());
+console.log(shop.qoldiq());*/
 
-// Masalani izohi c-TASK:
+// Masalani izohi E-TASK:
 
 // Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
 // MASALAN: getReverse("hello") return qilsin "olleh"
 
-function getReverse(string) {
+/*function getReverse(string) {
   return string.split("").reverse().join("");
 }
 
-console.log(getReverse("MIT eng zo'ri"));
+console.log(getReverse("MIT eng zo'ri"));*/
+
+// Masalani izohi F-TASK:
+
+//Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+//MASALAN: getReverse("hello") return true return qiladi
+
+function findDoublers(s) {
+  return s.split("").some((char, index, arr) => arr.indexOf(char) !== index);
+}
+
+console.log(findDoublers("Hello World!"));
